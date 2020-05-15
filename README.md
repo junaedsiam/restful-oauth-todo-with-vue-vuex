@@ -1,4 +1,4 @@
-# A RESTFUL Todo Application
+# A RESTFUL Todo Application with Vue
 ## (Vuex + Vue Router + axios + Bulma CSS )
 ![Todo snap](todo-app-vue.png)
 
