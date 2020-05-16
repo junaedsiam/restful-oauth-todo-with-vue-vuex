@@ -4,6 +4,21 @@
 
 ## API Endpoints 
 Keep in mind this app is a frontend implementation with VUE js. If you want to use it, you have to attach some sort of API with it.
+
+```js
+get('/todos') //For getting all todos
+post('/todos') //for storing a todo 
+delete('/todo/clear-all') //clear all todos 
+delete('/todo/delete-done') //Delete only completed todos 
+delete('/todo/{todo}') //delete a todo by id 
+put('/todo/mark-all') // mark all as done 
+put('/todo/{todo}') // update todo by id 
+```
+
+
+
+Here is a frontend implementation, based on the above API.
+
 ```js
 
 const instance = axios.create({
@@ -16,7 +31,7 @@ const instance = axios.create({
 });
 
 ```
-Then based on that instance, there are couple of methods to do the job. 
+Then based on that instance, we can create couple of functions. 
 
 ```js
 
