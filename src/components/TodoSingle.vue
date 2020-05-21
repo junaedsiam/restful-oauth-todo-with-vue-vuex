@@ -134,6 +134,7 @@ export default {
       this.cache.day = day.toLocaleDateString() + " 12:00 AM";
       this.updateTodo(this.cache)
       this.sendEditNull()
+      
     },
     removeTodoClick() {
       this.removeTodo(this.todo.id);

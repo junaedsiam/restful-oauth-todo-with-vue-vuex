@@ -1,38 +1,37 @@
-import axios from 'axios'
+import api from './apiClient'
+import { getToken } from '@/store/localStorage'
 
-const instance = axios.create({
-    baseURL: 'http://127.0.0.1:8000/api/',
-    timeout: 10000,
-    headers: {
-      'Accept': 'application/json',
-      'X-Requested-With':'XMLHttpRequest'
-    }
-  });
-export const getTodos =()=>{
-    return instance.get('todos')
+const setBearerToken = ()=>{
+  const token = getToken()
+  api.defaults.headers.common['Authorization'] = 'Bearer ' + token;
 }
 
-export const addTodo =(payload)=>{
-    return instance.post('todos',payload)
+export const getTodos = () => {
+  setBearerToken();
+  return api.get('todos')
 }
 
-export const removeTodo =(payload)=>{
-    return instance.delete(`todo/${payload}`,payload)
+export const addTodo = (payload) => {
+  return api.post('todos', payload)
 }
 
-export const updateTodo = (payload)=>{
-  return instance.put(`todo/${payload.id}`,payload)
+export const removeTodo = (payload) => {
+  return api.delete(`todo/${payload}`, payload)
+}
+
+export const updateTodo = (payload) => {
+  return api.put(`todo/${payload.id}`, payload)
 
 }
 
-export const markAllDone = ()=>{
-  return instance.put(`todo/mark-all`,{})
+export const markAllDone = () => {
+  return api.put(`todo/mark-all`, {})
 }
 
-export const deleteDone = ()=>{
-  return instance.delete('todo/delete-done',{})
+export const deleteDone = () => {
+  return api.delete('todo/delete-done', {})
 }
 
-export const clearAll = ()=>{
-  return instance.delete('todo/clear-all',{})
+export const clearAll = () => {
+  return api.delete('todo/clear-all', {})
 }

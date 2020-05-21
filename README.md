@@ -1,9 +1,27 @@
-# A RESTFUL Todo Application with Vue
-## (Vuex + Vue Router + axios + Bulma CSS )
-![Todo snap](todo-app-vue.png)
+# A RESTFUL OAUTH Todo Application with Vue
+This application is a frontend implmentation of a RESTFUL API, along with OAUTH 2.0 implementation ! A dedicated backend is needed in order to make this application work.
+I have used **Laravel Passport** along with **Laravel API**.
+
+For front - other than **VUEX** and **VUE-ROUTER**, **N-PROGRESS**, **VUEJS-DATEPICKER** has been used to make the UI better. And ofcourse  **LODASH** for making things easy. 
+
+Feel free to check the full project ! 
+
+
+## Home 
+### Before Login view 
+![Without Login](description_image/user-dashboard-without-login.png)
+
+### Registration / login 
+![Registration](description_image/user-registration.png)
+![Login](description_image/user-login.png)
+
+### Dashboard 
+![Dashboard](description_image/user-dashboard.png)
+
+
 
 ## API Endpoints 
-Keep in mind this app is a frontend implementation with VUE js. If you want to use it, you have to attach some sort of API with it.
+
 
 ```js
 get('/todos') //For getting all todos
@@ -67,9 +85,4 @@ export const clearAll = ()=>{
 }
 
 ```
-
-## External Libraries 
-Other than **VUEX** and **VUE-ROUTER**, **N-PROGRESS**, **VUEJS-DATEPICKER** is used to make the UI a little bit better. And ofcourse  **LODASH** for making things easy. 
-
-Feel free to check the full project ! 
 
